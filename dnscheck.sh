@@ -19,7 +19,7 @@ dig @1.1.1.1 $domain MX +short
 echo -e "\nTXT record(s):"
 dig @1.1.1.1 $domain TXT +short
 
-dkim="dig @1.1.1.1 _domainkey.$domain"
+dkim="dig @1.1.1.1 .default_domainkey.$domain"
 
 if [ -z "$dkim" ]
 then
